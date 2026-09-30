@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#08090d" />
+    <meta name="description" content="The Door — a tiny portal to strange science, deep thoughts, and delightful puzzles." />
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>The Door</title>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="orb orb-one" aria-hidden="true"></div>
+    <div class="orb orb-two" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="The Door home">
+          <span class="brand-mark" aria-hidden="true">
+            <span class="brand-mark-door"></span>
+            <span class="brand-mark-glow"></span>
+          </span>
+          <span class="brand-name">THE DOOR</span>
+        </a>
+        <div class="topbar-actions">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label" id="statusLabel">3 OPENINGS TODAY</span>
+          <div class="language-switcher" role="group" aria-label="Language">
+            <button class="language-button is-active" data-language="en" type="button" aria-pressed="true">EN</button>
+            <span>/</span>
+            <button class="language-button" data-language="hi" type="button" aria-pressed="false">हि</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">A PORTAL FOR THE CURIOUS</span></p>
+        <h1 id="page-title"><span data-i18n="headlineTop">Step through.</span><br /><em data-i18n="headlineEm">See what unfolds.</em></h1>
+        <p class="intro-copy" data-i18n="intro">One small door. An unexpected idea on the other side.</p>
+      </section>
+
+      <section class="door-area" aria-label="The Door">
+        <div class="constellation constellation-left" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="constellation constellation-right" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="door-halo" aria-hidden="true"></div>
+        <button class="door-button" id="doorButton" type="button" aria-label="Open The Door">
+          <span class="door-shadow"></span>
+          <span class="door-frame">
+            <span class="door-top-light"></span>
+            <span class="door-panel">
+              <span class="door-inner-glow"></span>
+              <span class="door-crossbar"></span>
+              <span class="door-knob"></span>
+              <span class="door-depth"></span>
+            </span>
+          </span>
+          <span class="floor-glow"></span>
+        </button>
+        <p class="tap-hint" id="tapHint"><span data-i18n="tapHint">TAP TO OPEN</span> <span class="tap-arrow">↗</span></p>
+        <p class="lock-message" id="lockMessage" hidden></p>
+      </section>
+
+      <section class="reveal-wrap" id="revealWrap" aria-live="polite" aria-atomic="true">
+        <div class="reveal-card" id="revealCard">
+          <div class="card-topline">
+            <span class="card-type" id="cardType">PHENOMENON</span>
+            <span class="card-count" id="cardCount">0 / 3 TODAY</span>
+          </div>
+          <div class="card-content">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p class="card-text" id="cardText"></p>
+          </div>
+          <div class="card-footer">
+            <span class="card-prompt" id="cardPrompt"></span>
+            <span class="card-spark" aria-hidden="true">✦</span>
+          </div>
+        </div>
+        <button class="discover-button" id="discoverButton" type="button">
+          <span data-i18n="discover">DISCOVER ANOTHER</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </button>
+      </section>
+
+      <footer class="footer">
+        <span>THE DOOR / 2026</span>
+        <span class="footer-center">MADE FOR MOMENTS BETWEEN MOMENTS</span>
+        <span id="footerCount">75 WAYS IN</span>
+      </footer>
+    </main>
+
+    <script src="content.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
