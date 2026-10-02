@@ -1,0 +1,28 @@
+{
+  "packageId": "com.thedoor.app",
+  "host": "12911synnysingh-cmyk.github.io",
+  "name": "The Door",
+  "launcherName": "The Door",
+  "display": "standalone",
+  "themeColor": "#000000",
+  "navigationColor": "#000000",
+  "backgroundColor": "#000000",
+  "enableNotifications": false,
+  "startUrl": "/the-door/",
+  "appVersion": "1.0.0",
+  "appVersionCode": 1,
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://12911synnysingh-cmyk.github.io/the-door/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": "true",
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "android"
+  }
+}
